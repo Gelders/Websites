@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Contact - Peter Gelders</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" media="screen" href="/css/main.css" />
+        <script src="/javascript/main.js"></script>
+        <!-- <script>
+            function check1() {
+                if (document.getElementById("KeuzeAccount").checked) {
+                    document.getElementById("BerichtVerzenden").style.display ="none";
+                    document.getElementById("password").style.display ="block";
+                    document.getElementById("GNaam").style.display ="block";
+                    document.getElementById("datumL").style.display ="block";
+                } 
+            }
+
+            function check2() {
+                if (document.getElementById("KeuzeBericht").checked) {
+                    document.getElementById("BerichtVerzenden").style.display ="block";
+                    document.getElementById("passwordd").style.display ="none";
+                    document.getElementById("GNaamm").style.display ="none";
+                    document.getElementById("datumLL").style.display ="none";
+                }
+            }
+        </script> -->
+    </head>
+    <body>
+        <header>
+            <h1 id="1"> This is my header of my website - Index</h1>
+            <nav>
+                <ul>
+                    <li><a href="index_Home.html">Home</a> </li>
+                    <li><a href="about.html">About</a> </li>
+                    <li><a class="current" href="contact.html">Contact</a> </li>
+                    <li class="FloatR"><a href="index.html"><img src="/images/icons/home.jpg"></a> </li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <!-- FORM -->
+            <form action="https://formspree.io/petergelders@hotmail.com" method="POST">
+                <p>
+                    <label for="KeuzeAB">
+                        Account aanmaak:
+                        <input type="radio" id="KeuzeAccount" name="KeuzeAB" value="KeuzeAccount" onclick="check1();" checked>
+                        Bericht verzenden:
+                        <input type="radio" id="KeuzeBericht" name="KeuzeAB" value="KeuzeBericht" onclick="check2();">
+
+                    </label>
+                </p>
+                <p>
+                    <label for="Vnaam">
+                        Voornaam : *
+                        <input type="text" id="Vname" name="Vnaam" required placeholder="Peter">
+                    </label>
+                </p>
+
+                <p>
+                    <label for="Anaam">
+                        Achternaam : *
+                        <input type="text" id="Anaam" name="Anaam" required placeholder="Gelders">
+                    </label>
+                </p>
+
+                <p>
+                    <label for="GNaam">
+                        Gebruikersnaam :
+                        <input type="text" id="GNaamm" name="GNaam" placeholder="Peter Gelders####">
+                    </label>
+                </p>
+
+                <p>
+                    <label for="Email">
+                        Email address : *
+                        <input type="email" id="Email" name="Email" required placeholder="petergelders@hotmail.com">
+                    </label>
+                </p>
+
+                <p>
+                    <label for="datumL">
+                        Geboortedatum:
+                        <input type="date" id="datumLL" name="datumL" placeholder="13/09/1997">
+                    </label>
+                </p>
+                
+                <p>
+                    <label for="Wachtwoord: ">
+                        Wachtwoord: *
+                        <input type="password" name="Wachtwoordd" pattern=".{6,}" title="Six or more characters" placeholder="123456">
+                    </label>
+                </p>
+
+                <p>
+                    <label for="Tele">
+                        Telefoon: *
+                        <input type="tel" id="Tele" name="Tele" placeholder="0485231063">
+                    </label>
+                </p>
+
+                <p>
+                    <label for="Bericht">
+                        Bericht: 
+                        <textarea  class="hidden" id="BerichtVerzenden" name="Bericht" placeholder="Schrijf hier je bericht..." cols="50" rows="10" width="397px"
+                        height="225px"></textarea>
+                    </label>
+                </p>
+
+                <footer>
+                    <pre>
+<input type="submit" name="Verzenden" value="Verzenden"> <input type="reset" name="reset" value="reset">
+                    </pre>
+                </footer>  
+            </form>
+        </main>
+
+        <footer class="footer">
+            <address>
+                    &copy;Copystrike 2018 - Peter Gelders   |     <a href="mailto:petergelders@outlook.com" title="Use this email address to contact me. Professional only!">petergelders@outlook.com</a>
+            </address>
+        </footer>
+    </body>
+</html>

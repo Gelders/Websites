@@ -1,0 +1,149 @@
+body{
+    margin: 0;
+    padding: 0;
+    max-width: 1920px;
+    max-height: 3850px;
+    box-sizing: border-box;
+    overflow: auto;
+}
+
+body a{
+    text-decoration: none;
+}
+/* Making the head/banner */
+header{
+    background-color: #4d3f3f;
+    border: 1px solid #707070;
+    width: 1919px;
+    min-height: 124px; 
+}
+
+    header h1{
+        float: left;
+        position: absolute;
+        left: 278px;
+        top: 0px;
+        right: 1590px;
+        bottom: 3755px;
+        font-size: 50px;
+        color: #8b8787;
+    }
+
+    body header img{
+        float: left;
+        position: absolute;
+        width: 125px;
+        left: 150px;
+        top: 0px;
+        right: 1590px;
+        bottom: 3755px;
+        border-radius: 50%;
+    }
+        /* navigatie */
+        header nav{
+            float: right;
+            position: absolute;
+            left: 1137px;
+            top: 46px;
+            right: 151px;
+        }
+        header nav ul li{
+            list-style-type: none;
+            display: inline;
+            padding: 0px 30px 0px 0px;
+        }
+
+        header nav ul li a{
+            text-decoration: none;
+            font-size: 23px;
+            color: #8b8787;
+        }
+
+        
+        header nav ul li a:hover{
+            text-decoration: none;
+            font-size: 23px;
+            color: #8b8750;
+            font-weight: 500;
+        }
+
+/* About */
+    /* img */
+    .left{
+        float: left;
+        position: absolute;
+        left: 142px;
+        top: 124px;
+        right: 857px;
+        bottom: 2271px;
+    }
+
+    /* Tekst */
+    .right{
+        float: right;
+    }
+
+    /* title */
+    .right h2{
+        position: absolute;
+        left: 1673px;
+        top: 151px;
+        right: 151px;
+        bottom: 3651px;
+        font-size: 35px;
+        color: #8b8787;
+    }
+
+    .right .tekst{
+        position: absolute;
+        left: 1104px;
+        top: 199px;
+        right: 144px;
+        bottom: 2991px;
+        text-align: right;
+        font-size: 25px;
+        color: #8d7676;
+    }
+
+/* studies */
+div img{
+    width: 291px;
+    height: 310px;
+}
+
+/* footer */
+footer{
+    background-color: #4d3f3f;
+    width: 1920px;
+    height: 250px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+.Allfooter{
+    position: absolute;
+}
+.Footer1{
+    float: left;
+    position: relative;
+    padding: 0px 65px 0px 0px;
+    font-size: 25px;
+    color: #8d7676;
+}
+
+.Footer2{
+    float: left;
+    position: relative;
+    padding: 0px 65px 0px 0px;
+    font-size: 25px;
+    color: #8d7676;
+}
+
+.Footer3{
+    float: left;
+    position: relative;
+    padding: 0px 65px 0px 0px;
+    font-size: 25px;
+    color: #8d7676;
+}

@@ -1,0 +1,37 @@
+/* First index.html full page website to enter the index_Home.html website. */
+/* Set a background for the whole page and margin&padding 0 */
+body{
+    padding: 0;
+    margin: 0;
+    background-image: url(/images/peter_web_5.jpg);
+    background-size: 100vw;
+}
+
+/* Set main ( tekst to the center of the page) */
+main{
+    margin-top: 50vh;
+    text-align: center;
+
+}
+
+/* Set the main link <a>  to a nice font and style with the normal look */
+main a{
+    text-decoration: none;
+    font-size: 2rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: transparent;
+    text-shadow: -5px 1px 0px black,
+                 -5px 2px 0px darkgrey,
+                 -5px 3px 0px lightgrey;
+}
+
+/* set main a:hover for some "animation-like" effect */
+main a:hover{
+    text-decoration: none;
+    font-size: 2.025rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: transparent;
+    text-shadow: -5px 1px 5px black,
+                 -5px 2px 5px darkgrey,
+                 -5px 3px 5px lightgrey;
+}

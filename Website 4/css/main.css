@@ -1,0 +1,231 @@
+/* First index.html full page website to enter the index_Home.html website. */
+/* Set the whole page and margin&padding 0 */
+body{
+    padding: 0;
+    margin: 0;
+}
+
+/* Set the header at the top with margin on the l and r --> and also absolute and with a color a min-height*/
+header{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    box-sizing: border-box;
+    margin: 0px 50px;
+    padding: 0;
+    min-height: 150px;
+    max-height: 150px;
+    background-color: grey;
+}
+    /* Set the header in one line with all + a bit of padding */
+    header nav ul li{
+        display: inline; 
+    }
+
+    header nav ul li a{
+        float: left;
+        display: block;
+        margin-left: 25px;
+        text-decoration: none;
+        text-align: center;
+        color: white;
+        width: 75px;
+        height: 25px;
+        background-color: lightgray;
+    }
+
+    .FloatR{ 
+        float: right;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 0px 20px 0px 0px;
+        height: 50px;
+        width: 100px;
+        background-color: lightgray;
+        overflow: hidden;
+    }
+
+    .current{
+        color:whitesmoke;
+        background-color: black;
+        
+    }
+/* Set the main with a margin and bg color and a min height to be able to scroll */
+main{
+    margin: 150px 50px 75px;
+    padding: 0;
+    background-color: darkgray;
+    min-height: 1500px;
+}
+    /*Set in main the artikles like this */
+    main article{
+        margin: 25px 50px;
+        max-width: 1000px;
+        padding: 0;
+        background-color: lightgray;
+        border: 1px solid black;
+    }
+
+        /* artikels headers h2 change the color and margins */
+        main article h2{
+            margin: 10px 10px;
+            color: black;
+        }
+
+            /* main p's set max width and margins */
+            main article p{
+                margin: 10px 10px;
+                max-width: 800px;
+                padding: 0;
+                background-color: gray;
+            }
+
+            .articleRestP{
+                margin: 10px 10px;
+                max-width: 800px;
+                padding: 0;
+                background-color: gray;
+            }
+            /* article p hover over to jump in */
+            article p:hover{
+                text-indent: 10px;
+            }
+
+                /* artikle hr horizontal line change the max width */
+                hr {
+                    display: block;
+                    padding: 0;
+                    margin: 0;
+                    max-width: 812px;
+                }
+
+                /* Article footer Set it with bg and border */
+                main article footer{
+                    margin: 10px 10px;
+                    max-width: 400px;
+                    padding: 0;
+                    background-color: rgba(128, 128, 128, 0.185);
+                    border-bottom: 1px solid black;
+
+                }
+
+/* Aside creat it next to the artikles */
+.aside{
+    margin: 0;
+    padding: 0;
+    position: fixed;
+    right: 410px;
+    top: 160px;
+    min-width: 340px;
+    background-color: lightgray;
+    border: 1px solid black;
+}
+
+.aside2{
+    margin: 0;
+    padding: 0;
+    position: fixed;
+    right: 360px;
+    top: 160px;
+    min-width: 340px;
+    background-color: lightgray;
+    border: 1px solid black;
+}
+    .aside h3,.aside2 h3{
+        list-style-type: none;
+        text-align: center;
+        font-size: 1.4rem;
+    }
+
+    .aside h3 a,.aside2 a{
+        text-decoration: none;
+        color: black;
+    }
+    .aside ul,.aside2 ul{
+        list-style-type: none;
+        padding: 10px;
+    }
+
+        .aside ul li,.aside2 ul li{
+            list-style-type: none;
+            padding: 10px;
+        }
+
+        .aside ul li a,.aside2 ul li a{
+
+            text-decoration: none;
+            color: slategrey;
+        }
+
+        .aside ul li a:hover,.aside2 ul li a:hover{
+            text-decoration: none;
+            color: dimgrey;
+            text-transform: capitalize;
+        }
+
+
+/* Contact form */
+    /*Set in main the form like this */
+    main form{
+        margin: 25px 50px;
+        max-width: 1000px;
+        padding: 0;
+        background-color: lightgray;
+        border: 1px solid black;
+    }
+
+    main form input{
+        width: 100%;
+    }
+
+    main form p label input[type="radio"]{
+        width: 10%;
+    }
+        /* main p's set max width and margins */
+        main form p{
+            margin: 10px 10px;
+            max-width: 40%;
+            padding: 0;
+            background-color: gray;
+        }
+        
+            /* Article footer Set it with bg and border */
+            main form footer{
+                margin: 10px 10px;
+                max-width: 400px;
+                padding: 0;
+                background-color: rgba(128, 128, 128, 0.185);
+                border-bottom: 1px solid black;
+            }
+
+                /* Form remove the textarea */
+                .hidden {
+                    display: none;
+                }
+
+                
+/* Set the footer fixt on the page on the bottem with aldo the same margin as the header and bg color... */
+.footer{
+
+    position: fixed;
+    bottom: 0;
+    min-height: 75px;
+    max-height: 75px;
+    padding: 35px;
+    left: 0;
+    right: 0;
+    box-sizing: border-box;
+    margin: 0px 50px;
+
+    background-color: grey;
+    color: white;
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+    footer a{
+        text-decoration: none;
+        color: white;
+    }
