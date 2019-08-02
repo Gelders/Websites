@@ -1,0 +1,37 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+
+    <script>
+        // Voer script uit zodra de pagina helemaal geladen is.
+        window.onload = function () {
+            document.getElementById('divResult').innerHTML = 'Het document is geladen';
+        }
+
+        // Andere schrijfwijze, hetzelfde resultaat
+        //window.addEventListener('load', function () {
+        //	document.getElementById('divResult').innerHTML = 'Het document is geladen';
+        //});
+
+        /*
+            - HTML-code en JavaScript-code zijn volledig gescheiden.
+            - In de body van het document is geen enkele verwijzing naar het script aanwezig.
+              Het is dus 'schone' HTML-code
+            - Het script bestaat uit één functie, Het is een functie zonder naam (een anonieme functie).
+              Hij wordt toegekend aan de eventhandler 'window.load'
+            - In het script wordt verwezen naar het element 'divResult'. We weten zeker dat dit bestaat
+              op het moment dat het script wordt uitgevoerd (hoewel het in de code wordt geschreven voordat het element
+              verderop in de HTML-code wordt gedefinieerd), omdat de funcit pas wordt uitevoerd op het moment
+              dat de event 'load' optreedt. Dat is per definitie pas het geval als alle code in het bestand geladen is
+        */
+    </script>
+</head>
+<body>
+
+    <h2>De event window.load</h2>
+    <div id="divResult"></div>
+
+</body>
+</html>

@@ -1,0 +1,23 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <div id="divResult"></div>
+
+    <script>
+        var kwadraat = function (getal) {
+            //  Kwadraat van het getal berekenen
+            var resultaat = getal * getal;
+            //  Kwadraat teruggeven
+            return resultaat;
+            //  Beknopt
+            return (getal * getal);
+        }
+
+        document.getElementById('divResult').innerHTML = kwadraat(5);
+    </script>
+</body>
+</html>

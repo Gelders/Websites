@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="/lib/jquery/jquery-2.2.3.min.js"></script>
+</head>
+<body>
+    <h2>jQuery basisvoorbeelden</h2>
+    <p>De eerste paragraaf</p>
+    <p>Nog een paragraaf</p>
+    <div>Tekst in een div</div>
+    <p>Een derde paragraaf</p>
+    <hr />
+    <div id="divResult"></div>
+
+    <script>
+        var paragrafen = $('p'); // Selecteer alle <p>'s in de pagina
+        console.log(paragrafen);
+        /*
+            De variabele paragrafen bevat nu een verzameling van 0 of meer DOM-elementen.
+            Code is gelijk aan:
+                var paragrafen = document.getElementByTagName('p');
+                var paragrafen = document.querySelectorAll('p');
+        */
+    </script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+
+    <script>
+        var intArray = [10, 20, 30, 40, 50];
+        var stringArray = ['rood', 'geel', 'blauw', 'groen', 'zwart', 'wit'];
+
+        //  .join()
+        console.log(intArray.join());               // "10,20,30,40,50"
+        console.log(intArray.join('-'));            // "10-20-30-40-50"
+        //  .split()
+        var joined = intArray.join();               // joined = "10,20,30,40,50"
+        console.log(joined.split(','));             // ["10", "20", "30", "40", "50"]
+        //  .reverse()
+        intArray.reverse();                         // array omkeren
+        console.log(intArray);                      // [50, 40, 30, 20, 10]
+        intArray.reverse();                         // array terugplaatsen
+        //  .sort()
+        stringArray.sort();                         // array sorteren
+        console.log(stringArray);                   // ["blauw", "geel", "groen", "rood", "wit", "zwart"]
+        //  .push()
+        console.log(intArray.push(60));             // 6; aantal elementen in array
+        console.log(intArray);                      // [10, 20, 30, 40, 50, 60]
+        //  .pop()
+        console.log(intArray.pop());                // 60; element dat uit de array gehaald is
+        console.log(intArray);                      // [10, 20, 30, 40, 50]
+        //  .concat()
+        console.log(stringArray.concat(intArray));  // ["blauw", "geel", "groen", "rood", "wit", "zwart", 10, 20, 30, 40, 50]
+        //  .slice()
+        console.log(stringArray.slice(1, 3));       // ["geel", "groen"]
+        //  .splice()
+        intArray.splice(2, 0, 100, 200);
+        console.log(intArray);                      // [10, 20, 100, 200, 30, 40, 50]
+        //  .shift()
+        console.log(intArray.shift());              // 10; element dat uit de array gehaald is
+        console.log(intArray);                      // [20, 100, 200, 30, 40, 50]
+        //  .unshift()
+        console.log(intArray.unshift(10, 500));     // 8; aantal elementen in array
+        console.log(intArray);                      // [10, 500, 20, 100, 200, 30, 40, 50]
+        //  .toString()
+        console.log(intArray.toString());           // 10,500,20,100,200,30,40,50
+        //  .toLocaleString()
+        console.log(intArray.toLocaleString());     // 10,500,20,100,200,30,40,50
+
+    </script>
+</body>
+</html>

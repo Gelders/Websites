@@ -1,0 +1,47 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Waarde uit tekstvak halen</title>
+    <script>
+		// globale variabele
+		var naam = '';
+
+		// Voer script uit zodra de pagina helemaal geladen is.
+		window.onload = function () {
+			// caching van HTML-elementen in variabele
+			var divResult = document.getElementById('divResult');
+
+			// event handler voor de knop
+			document.getElementById('btnKnop1').addEventListener('click', function () {
+				naam = document.getElementById('txtNaam').value;
+				divResult.innerHTML = '<h2>Welkom ' + naam + '</h2>';
+			}, false);
+		} // einde window.onload
+
+        /*
+            - We noemen alleen de nieuwe onderdelen. Boven in het script wordt nu een globale
+              'naam' gemaakt.
+            - In de regel 'naam = document.getElementById('txtNaam').value;' wordt de waarde
+              uit het tekstvak opgehaald en toegekend aan 'naam'.
+            - In de volgende regel wordt deze naar het scherm geschreven met 
+              '<h2>Welkom ' + naam + '</h2>'
+
+            EVENT WIJZIGEN
+            Stel dat u de waarde in een tekstvak wilt controleren op het moment dat een 
+            ander element de focus krijgt. De gebruiker gaat bijvoorbeeld naar het volgende
+            tekstvak in het formulier. I n dat geval zou u de event 'blur' kunnen gebruiken.
+            Deze event treedt op wanneer het geselecteerde element de focus verliest.
+
+            document.getElementById('txtNaam').addEventListener('blur', function(){...});
+        */
+
+    </script>
+</head>
+
+<body>
+    <h2>Inhoud van tekstvak opvragen</h2>
+    <input type="text" id="txtNaam" placeholder="uw naam..." />
+    <button id="btnKnop1">Toon boodschap</button>
+    <div id="divResult"></div>
+</body>
+</html>

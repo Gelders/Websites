@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <h2>removeChild</h2>
+    <p>Verwijder de alinea's van beneden naar boven</p>
+    <button id="btnKnop1">Verwijder</button>
+    <div id="divResult">
+        <p>Alinea 1</p>
+        <p>Alinea 2</p>
+        <p>Alinea 3</p>
+        <p>Alinea 4</p>
+        <p>Alinea 5</p>
+        <p>Alinea 6</p>
+    </div>
+
+    <script>
+        document.getElementById('btnKnop1').onclick = function () {
+            // 1. zoek laatste alinea
+            var divResult = document.getElementById('divResult');
+            var alinea = divResult.querySelectorAll('p:last-child')[0]; // array-notatie gebruiken om element uit NodeList te halen (ook al zit er maar 1 element in).
+            console.log(alinea + ' wordt verwijderd...');
+
+            // 2. Verwijder de alinea
+            divResult.removeChild(alinea);
+            console.log('verwijderd!');
+        }
+    </script>
+</body>
+</html>

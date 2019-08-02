@@ -1,0 +1,49 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+    <title>mouse events -click</title>
+    <script>
+		// globale variabele
+		var numClicks = 0;
+
+		// 1. Voer script uit zodra de pagina helemaal geladen is.
+		window.onload = function () {
+			// 2. caching van HTML-elementen in variabele
+			var divResult = document.getElementById('divResult');
+
+			// 3. event handler voor de knop
+			document.getElementById('btnKnop1').addEventListener('click', function () {
+				// variabele ophogen
+				numClicks++;
+				divResult.innerHTML = numClicks + ' keer geklikt!';
+			});
+
+			// 4. andere notatie, zelfde effect.
+			//document.getElementById('btnKnop1').onclick = function () {
+			//	numClicks++;
+			//	divResult.innerHTML = numClicks + ' keer geklikt!';
+			//};
+
+		} // einde window.onload
+
+
+        /*
+            - Het script wordt gestart met een variabele 'numClicks'. Omdat deze buiten alle functies
+              staat, is het een globale variabele. De waarde ervan is overal in het script toegankelijk
+            - In de event handler 'window.onload' wordt de event handler voor de knop aangekoppeld. 
+              We gebruiken hiervoor de functie 'addEventListener'
+                - Merk op dat we het element 'divResult' wel cachen, maar de knop niet. Hiervoor gebruiken
+                  rechtstreeks de notatie 'document.getElementById()'. Dit doen we omdat de knop maar één keer wordt gebruikt.
+                  Het cachen is dan niet nodig (overhead).
+            - De event handler voor de knop is eenvoudig. Hierin wordt de variabele opgehoogd en 
+              het resultaat in 'divResult' geschreven
+        */
+    </script>
+</head>
+
+<body>
+    <h2>Klikken op knoppen afvangen</h2>
+    <button id="btnKnop1">Hoeveel muiskliks?</button>
+    <div id="divResult"></div>
+</body>
+</html>

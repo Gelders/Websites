@@ -1,0 +1,37 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <h2>document.createTextNode</h2>
+    <p>Inhoud van de tekst node</p>
+    <input type="text" id="txtElement" />
+
+    <button id="btnKnop1">Maak</button>
+    <p>(Gebruik de Developer Tools om het resultaat te zien)</p>
+    <div id="divResult"></div>
+
+    <script>
+		document.getElementById('btnKnop1').onclick = function () {
+			// 1. maak nieuw element.
+			var newElement = document.createElement('p');
+			newElement.id = 'paragraaf';
+
+			// 2. maak nieuwe textnode op basis van tekst in het tekstveld.
+			var node = document.getElementById('txtElement').value;
+			var newNode = document.createTextNode(node);
+
+			// 3. Voeg de tekst toe aan het nieuwe element.
+			newElement.appendChild(newNode);
+
+			// 4. Log en zet in pagina.
+			console.log(newNode);
+			console.log(newElement);
+			document.getElementById('divResult').innerHTML =
+				'De node ' + newNode + ' is gemaakt';
+		}
+    </script>
+</body>
+</html>

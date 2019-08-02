@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <div id="divResult"></div>
+
+    <script>
+        var kwadraat = function (getal) {
+            //  Kwadraat van het getal berekenen
+            var kwadraat = getal * getal;
+            //  Resultaatstring toekennen
+            var resultaat = 'OK';
+            //  Kwadraat teruggeven
+            return {
+                uitkomst: kwadraat,
+                resultaat: resultaat
+            };
+        }
+
+        //  Object opslaan in een variabele
+        var aanroep = kwadraat(5);
+        //  De variabele 'aanroep' is nu een object met twee leden (members).
+        //  De inhoud van het lid 'uitkomst' naar de div schrijven
+        document.getElementById('divResult').innerHTML = aanroep.uitkomst;
+    </script>
+</body>
+</html>

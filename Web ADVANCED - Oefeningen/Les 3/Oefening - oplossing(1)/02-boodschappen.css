@@ -1,0 +1,29 @@
+﻿#boodschappenLijst
+{
+    list-style: none;
+    margin: 10px 0 0 0;
+    padding: 0;
+    width: 500px;
+}
+
+    #boodschappenLijst li
+    {
+        border: 1px solid grey;
+        background-color: lightgrey;
+        font-weight: bold;
+        padding: 5px;
+        margin-top: 5px;
+    }
+
+    #boodschappenLijst li.checked
+    {
+        text-decoration:line-through;
+        background-color: lightgreen;
+    }
+
+        #boodschappenLijst li a
+        {
+            float:right;
+            color: red;
+            font-style: italic;
+        }

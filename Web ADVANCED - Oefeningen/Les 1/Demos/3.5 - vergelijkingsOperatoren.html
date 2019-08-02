@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+
+    <script>
+        var x = 10;
+        var y = 20;
+
+        //  false, want x is kleiner dan y
+        console.log(x > y);
+        //  true, want x is niet gelijk aan y
+        console.log(x != y);
+        //  true, want beide beweringen zijn waar
+        console.log((x < y) && (x != y));
+        //  false, want beide beweringen zijn onwaar
+        console.log((x >= y) || (x == y));
+        //  true. Javascript voert zelf een conversie tussen de verschillende  gegevenstypen uit
+        //  en concludeert dat de waarden aan elkaar gelijk zijn
+        console.log(4 == '4');
+        //  false, want een number (links) en een string (rechts) zijn niet van hetzelfde type, dus zijn ze nooit aan elkaar gelijk
+        console.log(4 === '4');
+        //  false of een foutmelding (hallo is not a number). De conversie werkt alleen goed indien de string echt een nummer is
+        console.log(4 == 'hallo');
+        //  true. Javascript is immers hoofdlettergevoelig
+        console.log('hallo' != 'Hallo');
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,89 @@
+﻿html {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    -moz-box-sizing: inherit;
+    -webkit-box-sizing: inherit;
+    box-sizing: inherit;
+}
+
+.container {
+    clear: both;
+}
+
+.toRight {
+    float: right;
+}
+
+#calculator {
+    -moz-box-sizing: content-box;
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box;
+    width: 600px;
+    margin: auto;
+    background-color: lightgrey;
+    border: 1px solid darkgray;
+    display: flex;
+    -ms-flex-direction: column;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+}
+
+    #calculator div {
+        -ms-flex: auto;
+        -webkit-flex: auto;
+        flex: auto;
+    }
+
+    #calculator * {
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+
+    #calculator .display {
+        text-align: right;
+    }
+
+    #calculator .history {
+        color: darkgray;
+        font-size: 40px;
+        min-height: 50px;
+    }
+
+    #calculator .result {
+        font-size: 100px;
+        min-height: 120px;
+        font-weight: bold;
+        border-bottom: 1px solid darkgray;
+    }
+
+    #calculator .button-container {
+        display: flex;
+        -ms-flex-wrap: wrap;
+        -webkit-flex-wrap: wrap;
+        flex-wrap: wrap;
+    }
+
+        #calculator .button-container button {
+            -ms-flex: 0 1 auto;
+            -webkit-flex: 0 1 auto;
+            flex: 0 1 auto;
+            width: 150px;
+            height: 150px;
+            font-weight: bold;
+            font-size: 50px;
+        }
+
+        #calculator .button-container .button-3 {
+            width: 450px;
+        }
+
+        #calculator .button-container .button-4 {
+            width: 600px;
+        }

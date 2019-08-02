@@ -1,0 +1,56 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+
+    <input type="text" id="txtFirstName" />
+    <button id="btnSubmit">Klik mij</button>
+
+    <script>
+        /*
+            De eenvoudigste manier om een event handler te schrijven is 
+            door een JavaScript-functie te schrijven die wordt uitgeoerd 
+            voor een bepaald element.
+        */
+
+        window.onload = function () {
+            alert('Load');
+        };
+        document.getElementById('btnSubmit').onclick = function () {
+            alert('click');
+        };
+
+        /*
+            Of een benoemde functie gebruiken die wordt uitgevoerd als de event optreed
+        */
+        var handleFocus = function () {
+            alert('Focus');
+        };
+        document.getElementById('txtFirstName').onfocus = handleFocus; // Geen (), anders word de functie al ter plekke uitgevoerd
+
+        /*
+            addEventListener()
+        */
+
+        window.addEventListener('load', function () {
+            alert('load (addEventListener)');
+        });
+        document.getElementById('txtFirstName').addEventListener('click', function () {
+            aler('click (addEventListener)');
+        });
+
+        /*
+            Merk op dat de algemene afspraak bij het schrijven van een event
+            handler is dat de naam van de event wordt voorafgegaan door
+            het woordje on. Dus bij de event 'click' hoort de event handler 'onclick'
+            Alle namen van events en event handlers worden in kleine letters geschreven
+
+            Ook worden er geen event handlers meer in HTML geschreven
+                <body onload="init()"> of <img onmouseover="wisselAfbeelding()">
+        */
+    </script>
+</body>
+</html>

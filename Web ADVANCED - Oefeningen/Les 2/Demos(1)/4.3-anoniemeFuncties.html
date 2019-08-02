@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+
+    
+    <script>
+        /*
+            - Anonieme functies hebben geen naam
+            - Kunnen dus ook niet ergens anders aangeroepen worden
+            - Worden ter plekke aangemaakt & uitgevoerd
+            - Daarna worden ze terug verwijderd uit het geheugen
+         */
+
+        window.addEventListener('load', function () {
+            alert("Alles in orde");
+        });
+
+        //  Indien de functie toch nog ergens ander aangeroepen moet worden:
+
+        var init = function () {
+            alert("Alles in orde (herbruikbaar)");
+        }
+        window.addEventListener('load', init);
+        
+    </script>
+
+</body>
+</html>

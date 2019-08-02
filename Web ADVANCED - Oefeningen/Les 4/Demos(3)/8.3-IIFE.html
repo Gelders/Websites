@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+
+    <script>
+        //  01. Standaard manier voor het declareren van een functie
+        function zegHallo () {
+            console.log('Hello Jeffry');
+        }
+        var boodschap = zegHallo();
+        /*
+            Deze functie is nu globaal beschikbaar.
+            Ze kan in de console van een browser gewoon aangeroepen worden
+        */
+
+        //  02. Haakjes rondom functie definitie plaatsen
+        (function zegHallo() {
+            console.log('Hello Jeffry');
+        })();
+        /*
+            Omdat er twee haakjes '()' staan op het einde van het statement
+            wordt de functie automatisch uitgevoerd.
+            Omdat de functie zelf tussen twee haakjes '()' staat is deze
+            niet meer bereikbaar vanuit de global scope
+        */
+
+        //  03. Parameters meegeven aan een IIFE
+        (function zegHallo(name) {
+            console.log('Hello ' + name);
+        })('Jeffry');
+        /*
+            De parameter die meegegeven wordt bij de uitvoer van de IIFE 
+            wordt doorgegeven aan de functie
+        */
+
+        //  04. Naam laten vallen
+        (function (name) {
+            console.log('Hello ' + name);
+        })('Jeffry');
+        /*
+            Omdat de functie in een geïsoleerde scope uitgevoerd wordt
+            is het niet nuttig om deze een naam te geven.
+        */
+    </script>
+</body>
+</html>

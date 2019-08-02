@@ -1,0 +1,74 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+    <title>mouse events</title>
+    <style>
+        #divBox {
+            height: 150px;
+            width: 350px;
+            border: 2px solid black;
+        }
+    </style>
+    <script>
+		// Voer script uit zodra de pagina helemaal geladen is.
+		window.onload = function () {
+			// caching van HTML-elementen in variabelen
+			var divResult = document.getElementById('divResult');
+			var box = document.getElementById('divBox');
+
+			// event handler om mouseover af te vangen
+			box.onmouseover = function () {
+				divResult.innerHTML += 'De muis is nu in de Box <br />';
+				// box.style.backgroundColor = '#FFC'; // Oefening in het boek: de achtergrondkleur aanpassen
+			};
+
+			// event handler om mouseout af te vangen
+			box.onmouseout = function () {
+				divResult.innerHTML += 'Tot ziens! De muis heeft de Box verlaten <br />';
+				// box.style.backgroundColor = '#FFF'; // achtergrondkleur herstellen
+			};
+		} // einde window.onload
+
+        /*
+            - Als eerste wordt alle code opgenomen in een event handler 'window.onload'.
+              Zo weten we zeker dat de elementen 'divBox' en 'divResult' beschikbaar zijn
+            - Let op 'caching' van de HTML-elementen 'divBox' en 'divResult'. Dit scheelt 
+              verderop in de code veel typewerk, omdat we dan niet steeds 'document.getElementById('...')' 
+              hoeven te schrijven. Bovendien is het goed voor de snelheid van de pagina, omdat JavaScript
+              maar een keer de elementen in de pagina hoeft op te zoeken. Daarna zijn ze beschikbaar 
+              in de variabelen 'divResult' en 'divBox'.
+            - Daarna worden twee event handlers geschreven die de 'mouseover' en 'mouseout' afvangen.
+              We schrijven verder alleen een tekstje in 'divResult', maar u zou de functi natuurlijk kunnen 
+              uitbreiden om nuttiger dingen te doen
+        */
+    </script>
+</head>
+
+<body>
+    <h2>mouseover en mouseout</h2>
+    <div id="divBox"></div>
+    <div id="divResult"></div>
+
+    <script>
+        /*
+            Indien de code onderaan de body geplaatst word, hoeft er geen test te gebeuren 
+            om te zien of alle elementen ingeladen zijn
+        */
+
+        /*
+            var divResult = document.getElementById('divResult');
+            var box = document.getElementById('divBox');
+
+            box.onmouseover = function () {
+                divResult.innerHTML += 'De muis is nu in de Box <br />';
+                // box.style.backgroundColor = '#FFC'; // Oefening in het boek: de achtergrondkleur aanpassen
+            };
+
+            box.onmouseout = function () {
+                divResult.innerHTML += 'Tot ziens! De muis heeft de Box verlaten <br />';
+                // box.style.backgroundColor = '#FFF'; // achtergrondkleur herstellen
+            };
+        */
+    </script>
+</body>
+</html>

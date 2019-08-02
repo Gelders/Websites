@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+
+    <button id="btnPrompt" onclick="toonPrompt();">Voer code in</button>
+    <div id="divResult"></div>
+
+    <script>
+        //  functie
+        function toonPrompt() {
+            var code = prompt('Vul uw promotiecode in', 'uw code');
+            var tekst = 'De code die u invoerde was: ' + code;
+            document.getElementById('divResult').innerHTML = tekst;
+        }
+
+        /*
+         * - Nieuw in het HTML-deel van de code is de knop. 
+         * - De code is nu omgeven door een functiedefinitie. We hebben als functienaam toonPrompt gekozen.
+         *   De naam van een functie mag u zelf verzinnen.
+         * - Achter de functienaam staat een hakenpaar (). De functie heeft geen parameters, daarom zijn de haken leeg.
+         *   De inhoud van de functie staat tussen accolades {...}. Dit is verplicht!
+         * - Een kenmerk van functies is dat de code die er in staat pas wordt uitgevoerd op het moment dat deze wordt aangeroepen. 
+         *   Dat gebeurt hier via de event handler onclick="..." inde definitie van de knop.
+         */
+    </script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+
+    <h2>result properties</h2>
+    <ul id="resultList"></ul>
+    <h2>window.navigator properties</h2>
+    <ul id="resultList2"></ul>
+
+    <script>
+        var result = {
+            resultaat: 100,
+            statusCode: 'OK'
+        };
+
+        for (var i in result) {
+            document.getElementById('resultList').innerHTML +=
+                '<li><b>' + i + '</b>: ' + result[i] + '</li>';
+        }
+
+        //  Alle properties van window.navigator afdrukken
+        for (var i in window.navigator) {
+            document.getElementById('resultList2').innerHTML +=
+                '<li><b>' + i + '</b>: ' + window.navigator[i] + '</li>';
+        }
+    </script>
+</body>
+</html>

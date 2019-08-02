@@ -1,0 +1,63 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+
+</head>
+<body>
+    <p>
+        <label for="invoer1">
+            Invoer 1 :
+            <input id="invoer1" />
+        </label>
+    </p>
+    <p>
+        <label for="invoer2">
+            Invoer 2 :
+            <input id="invoer2" />
+        </label>
+    </p>
+    <p>
+        <label for="uitkomst">
+            Uitkomst :
+            <input id="uitkomst"
+                   readonly />
+        </label>
+    </p>
+    <button onclick="optellen()">Optellen</button>
+    <button onclick="vermenigvuldigen()">Vermenigvuldigen</button>
+    <button onclick="aftrekken()">Aftrekken</button>
+    <button onclick="delen()">Delen</button>
+
+    <script>
+        function optellen() {
+            var invoer1 = parseFloat(document.getElementById('invoer1').value);
+            var invoer2 = parseFloat(document.getElementById('invoer2').value);
+
+            document.getElementById('uitkomst').value = invoer1 + invoer2;
+        }
+
+        function vermenigvuldigen() {
+            var invoer1 = parseFloat(document.getElementById('invoer1').value);
+            var invoer2 = parseFloat(document.getElementById('invoer2').value);
+
+            document.getElementById('uitkomst').value = invoer1 * invoer2;
+        }
+
+        function aftrekken() {
+            var invoer1 = parseFloat(document.getElementById('invoer1').value);
+            var invoer2 = parseFloat(document.getElementById('invoer2').value);
+
+            document.getElementById('uitkomst').value = invoer1 - invoer2;
+        }
+
+        function delen() {
+            var invoer1 = parseFloat(document.getElementById('invoer1').value);
+            var invoer2 = parseFloat(document.getElementById('invoer2').value);
+
+            document.getElementById('uitkomst').value = invoer1 / invoer2;
+        }
+    </script>
+</body>
+</html>

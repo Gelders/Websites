@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <h2>replaceChild</h2>
+    <p>Vervang de alinea</p>
+    <button id="btnKnop1">Vervang</button>
+    <div id="divResult">
+        <p>Alinea 1</p>
+    </div>
+
+    <script>
+        document.getElementById('btnKnop1').onclick = function () {
+            // 1. zoek laatste alinea
+            var divResult = document.getElementById('divResult');
+            var oudeAlinea = divResult.querySelectorAll('p:last-child')[0]; // array-notatie gebruiken om element uit NodeList te halen (ook al zit er maar 1 element in).
+            console.log(oudeAlinea + ' wordt vervangen...');
+
+            // 2. vervang de alinea
+            var nieuweAlinea = document.createElement('p');
+            var nieuweTekst = document.createTextNode('Vervangen...!');
+            nieuweAlinea.appendChild(nieuweTekst);
+            divResult.replaceChild(nieuweAlinea, oudeAlinea);
+            console.log('vervangen!');
+        }
+    </script>
+</body>
+</html>

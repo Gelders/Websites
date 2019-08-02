@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    
+
+    <script>
+        //  Functie met 3 parameters voor het berekenen van het volume
+        var getVolume = function (hoogte, breedte, diepte) {
+            var volume = hoogte * breedte * diepte;
+            return volume;
+        }
+
+        //  Functie aanroepen zoals bedoeld
+        var volume1 = getVolume(10, 20, 3); // 600
+        console.log(volume1);
+
+        //  Functie aanroepen zonder parameters
+        var volume2 = getVolume(); // NaN
+        console.log(volume2);
+        /*
+            In JavaScript is dit ook geldige code (alle parameters zijn optioneel)
+            Omdat de parameters nu allemaal de waarde 'undefined' krijgen is de uitkomst 'NaN'
+        */
+
+        //  Functie aanroepen met teveel parameters
+        var volume3 = getVolume(10, 20, 3, 40, 100); // 600
+        console.log(volume3);
+        /*
+            In JavaScript is dit ook geldige code (extra parameters worden in de achtergrond bijgehouden)
+            De extra parameters zijn wel bruikbaar in de functie maar zullen in dit geval genegeerd worden
+        */
+    </script>
+</body>
+</html>

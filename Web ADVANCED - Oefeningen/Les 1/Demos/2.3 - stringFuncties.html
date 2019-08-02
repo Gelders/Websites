@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+
+    <script>
+        var boodschap = "Hello" + " world";
+        //  console.log('...') is een ingebouwde functie om naar de debug console in de browser te schrijven
+
+        //  Aantal tekens in een string
+        console.log(boodschap.length);
+        //  Karakter op een bepaalde index
+        console.log(boodschap.charAt(2));
+        //  Een deel van de string
+        console.log(boodschap.substring(1, 4));
+        //  De index positie van een karakter
+        console.log(boodschap.indexOf('w'));
+        console.log(boodschap.indexOf('z'));
+        //  De laatste positie van een karakter
+        console.log(boodschap.lastIndexOf('o'));
+        //  string vervangen door andere string
+        console.log(boodschap.replace('world', 'Hasselt'));
+        //  omzetten naar hoofd/kleine letters
+        console.log(boodschap.toUpperCase());
+        console.log(boodschap.toLowerCase());
+    </script>
+    
+</body>
+</html>

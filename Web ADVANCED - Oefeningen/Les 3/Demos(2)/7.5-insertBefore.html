@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <h2>document.insertBefore()</h2>
+    <p>Tekst toevoegen: </p>
+    <input type="text" id="txtElement" />
+    <button id="btnKnop1">Maak</button>
+    <p>(Gebruik de Developer Tools om het resultaat te zien)</p>
+    <div id="divResult"></div>
+
+    <script>
+        // tellertje voor nieuwe <div>'s.
+        var index = 1;
+
+        document.getElementById('btnKnop1').onclick = function () {
+            // 1. maak nieuw element.
+            var newElement = document.createElement('div');
+            newElement.id = 'div' + index++;
+
+            // 2. maak nieuwe textnode op basis van tekst in het tekstveld.
+            var node = document.getElementById('txtElement').value;
+            var newNode = document.createTextNode(node);
+
+            // 3. Voeg de tekst toe aan het nieuwe element.
+            newElement.appendChild(newNode);
+
+            // 4. Log en Voeg voor laatste element toe aan divResult.				
+            console.log(newElement);
+            var divResult = document.getElementById('divResult');
+            divResult.insertBefore(newElement, divResult.firstChild);
+        }
+    </script>
+</body>
+</html>

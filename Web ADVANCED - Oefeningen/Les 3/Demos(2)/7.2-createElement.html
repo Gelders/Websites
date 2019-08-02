@@ -1,0 +1,28 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+    <title>document.createElement()</title>
+</head>
+
+<body>
+    <h2>document.createElement</h2>
+    <p>Typ de naam van een HTML-element</p>
+    <input type="text" id="txtElement" />
+    <button id="btnKnop1">Maak</button>
+    <p>(Gebruik de Developer Tools om het resultaat te zien)</p>
+    <div id="divResult"></div>
+
+
+    <script>
+		// Maak een element van het type dat in het tekstvak is aangegeven.
+		document.getElementById('btnKnop1').onclick = function () {
+			var element = document.getElementById('txtElement').value;
+			var newElement = document.createElement(element);
+			newElement.id = 'nieuwElement';
+			console.log(newElement);
+			document.getElementById('divResult').innerHTML =
+				'Het element ' + newElement + ' is gemaakt';
+		}
+    </script>
+</body>
+</html>

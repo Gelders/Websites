@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <h1>Fout</h1>
+    <div id="divResultaatFout"></div>
+    <h1>Correct</h1>
+    <div id="divResultaatCorrect"></div>
+    <h1>Verkorte notatie</h1>
+    <div id="divResultaatVerkorteNotatie"></div>
+
+    <script>
+        //  Lees twee getallen in en tel ze op.
+        var getal1 = prompt('Vul het eerste getal in', 'getal 1');
+        var getal2 = prompt('Vul het tweede getal in', 'getal 2');
+
+        //  Tel 2 getallen bij elkaar op (foute versie)
+        var totaalFout = getal1 + getal2;
+        //  Variabele met tekst maken voor in div
+        var tekstFout = getal1 + ' plus ' + getal2 + ' = ' + totaalFout;
+        //  Tekst weergeven in div
+        document.getElementById('divResultaatFout').innerHTML = tekstFout;
+
+        //  Tel 2 getallen bij elkaar op (correcte versie)
+        var totaalCorrect = parseInt(getal1) + parseInt(getal2);
+        //  Variabele met tekst maken voor in div
+        var tekstCorrect = getal1 + ' plus ' + getal2 + ' = ' + totaalCorrect;
+        //  Tekst weergeven in div
+        document.getElementById('divResultaatCorrect').innerHTML = tekstCorrect;
+
+        //  Verkorte notatie
+        var tekstVerkort = getal1 + ' plus ' + getal2 + ' = ' + (parseInt(getal1) + parseInt(getal2));
+        //  Tekst weergeven in div
+        document.getElementById('divResultaatVerkorteNotatie').innerHTML = tekstVerkort;
+    </script>
+
+</body>
+</html>

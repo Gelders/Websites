@@ -1,0 +1,69 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <h4>Break</h4>
+    <div id="divResultBreak"></div>
+    <h4>Continue</h4>
+    <div id="divResultContinue"></div>
+    <h4>Return</h4>
+    <div id="divResultReturn"></div>
+    <h4>Return object</h4>
+    <div id="divResultReturnObjectResultaat"></div>
+    <div id="divResultReturnObjectStatus"></div>
+
+    <script>
+        //  Break
+        var target = 17,
+            n = 0;
+
+        // (opzettelijke) oneindige lus
+        while (true) {
+            n++;
+            if (n === target) {
+                break; // spring uit de lus zodra n gelijk is aan 17
+            }
+        }
+
+        document.getElementById('divResultBreak').innerHTML =
+			'n heeft het doel bereikt: ' + n + '<br />';
+
+        //  Continue
+        var getal = 10;
+        for (var teller = 1; teller <= 10; teller++) {
+            if (teller % 2 !== 0) {
+                continue;
+            }
+            document.getElementById('divResultContinue').innerHTML +=
+				teller + ' maal ' + getal + ' = ' + teller * getal + '<br />';
+        }
+
+        //  Return
+        var kwadraat = function (x) {
+            return x * x;
+        };
+        document.getElementById('divResultReturn').innerHTML +=
+				'het kwadraat van ' + getal + ' is ' + kwadraat(getal);
+
+        //  Return objecten
+        var kwadraatObject = function (x) {
+            var result = x * x;
+            var status = 'OK';
+
+            return {
+                resultaat: result,
+                statusCode: status
+            };
+        };
+        var result = kwadraatObject(getal);
+        document.getElementById('divResultReturnObjectResultaat').innerHTML +=
+			'Het kwadraat van ' + getal + ' is ' + result.resultaat + '<br />';
+        document.getElementById('divResultReturnObjectStatus').innerHTML +=
+			'De teruggegeven statuscode is:  ' + result.statusCode;
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,97 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <div id="divResult"></div>
+    <div id="divResult2"></div>
+    <div id="divResult3"></div>
+    <div id="divResult4"></div>
+
+    <script>
+        //  Als ik meer dan 2000 euro spaar, kan ik een nieuwe laptop kopen.
+        //  Anders moet ik nog een jaar wachten
+        var spaargeld = 1500;
+        if (spaargeld >= 2000) {
+            laptop = true;
+            document.getElementById('divResult').innerHTML = "Nieuwe laptop komt eraan!";
+        }
+        else {
+            laptop = false;
+            document.getElementById('divResult').innerHTML = "Nog even verder sparen...";
+        }
+        //  Verkorte notatie
+        (spaargeld >= 2000) ? document.getElementById('divResult2').innerHTML = "Nieuwe laptop komt eraan!" : document.getElementById('divResult2').innerHTML = "Nog even verder sparen...";
+        
+        var dagIndex = new Date().getDay();
+        var dag;
+        //  Meerdere else
+        if (dagIndex === 0) {
+            dag = 'zondag';
+        } else if (dagIndex === 1) {
+            dag = 'maandag';
+        } else if (dagIndex === 2) {
+            dag = 'dinsdag';
+        } else if (dagIndex === 3) {
+            dag = 'woensdag';
+        } else if (dagIndex === 4) {
+            dag = 'donderdag';
+        } else if (dagIndex === 5) {
+            dag = 'vrijdag';
+        } else if (dagIndex === 6) {
+            dag = 'zaterdag';
+        }
+        //  Switch statement
+        switch (dagIndex) {
+            case 0:
+                dag = "zondag";
+                break;
+            case 1:
+                dag = "maandag";
+                break;
+            case 2:
+                dag = "dinsdag";
+                break;
+            case 3:
+                dag = "woensdag";
+                break;
+            case 4:
+                dag = "donderdag";
+                break;
+            case 5:
+                dag = "vrijdag";
+                break;
+            case 6:
+                dag = "zaterdag";
+                break;
+        }
+        document.getElementById('divResult3').innerHTML = 'Het is vandaag: ' + dag;
+
+        //  Meerdere waardes dezelfde uitvoer
+        switch (dagIndex) {
+            case 1:
+            case 2:
+            case 3:
+            case 4:
+            case 5:
+                document.getElementById('divResult4').innerHTML = 'Werkdag :(';
+                break;
+            case 0:
+            case 6:
+                document.getElementById('divResult4').innerHTML = 'WEEKEND!';
+                break;
+        }
+
+        //  OPGELET!!!
+        //  Fout -> expressie is een toewijzing en GEEN test (maar 1 '=' teken)
+        if (a = 10) {
+            b = 20;
+        }
+        else {
+            b = 30 // deze regeld wordt nooit uitgevoerd!!
+        }
+    </script>
+</body>
+</html>

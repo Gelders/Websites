@@ -1,0 +1,64 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+    <title>mouse events</title>
+    <style>
+        #divBox {
+            height: 150px;
+            width: 350px;
+            border: 2px solid black;
+        }
+
+        #divCoords {
+            height: 30px;
+            width: 350px;
+            border: 2px solid black;
+            margin-top: 4px;
+        }
+    </style>
+    <script>
+		// Voer script uit zodra de pagina helemaal geladen is.
+		window.onload = function () {
+			// caching van HTML-elementen in variabelen
+			var divResult = document.getElementById('divResult');
+			var box = document.getElementById('divBox');
+			var coords = document.getElementById('divCoords');
+
+			// functie om mouseover af te vangen
+			box.onmouseover = function () {
+				divResult.innerHTML += 'De muis is nu in de Box <br />';
+			};
+
+			// functie om mouseout af te vangen
+			box.onmouseout = function () {
+				divResult.innerHTML += 'Tot ziens! De muis heeft de Box verlaten <br />';
+			};
+
+			// functie om mousemove (binnen de box) af te vangen.
+			// de coordinaten worden meegegeven in het event-object als parameter.
+			box.onmousemove = function (e) {
+				coords.innerHTML = 'Coordinaten: X : ' + e.clientX + ', Y: ' + e.clientY;
+			};
+		} // einde window.onload
+
+        /*
+            - De event handler wordt toegevoegd voor de variabele box; 
+              box.onmousemove = function(e). De functie krijgt nu de event zelf mee als parameter
+            - De event handler verwerkt de event 'mouseover'. Deze wordt telkens aangeroepen als 
+              u de muis verplaatst. Dit kan dus tientallen keren per seconde zijn!
+            - Binnen de functie gebruiken we de eigenschappen 'e.clientX' en 'e.clientY'
+              om de x- en y-coördinaten op te halen. Ook deze zijn telkens bijgewerkt
+            - We schrijven de coördinaten in het element 'coords'. Zo is in de pagina telkens 
+              te zien wat de coördinaten van de muis zijn. Dit kan bijvoorbeeld van pas komen
+              in games of andere toepassingen waarbij de positie van de muis van belang is
+        */
+    </script>
+</head>
+
+<body>
+    <h2>mouseover en mouseout</h2>
+    <div id="divBox"></div>
+    <div id="divCoords"></div>
+    <div id="divResult"></div>
+</body>
+</html>

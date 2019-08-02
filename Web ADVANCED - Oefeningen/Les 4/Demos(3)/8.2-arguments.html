@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+
+    <script>
+        //  Functie met 3 parameters voor het berekenen van het volume
+        var getVolume = function (hoogte, breedte, diepte) {
+            // Controleren of er een correct aantal parameters meegegeven is
+            if (arguments.length !== 3) {
+                return 'Error - onjuist aantal parameters';
+            }
+
+            var volume = hoogte * breedte * diepte;
+            return volume;
+        }
+
+        //  Functie aanroepen zoals bedoeld
+        var volume1 = getVolume(10, 20, 3); // 600
+        console.log(volume1);
+
+        //  Functie aanroepen zonder parameters
+        var volume2 = getVolume(); // Error - onjuist aantal parameters
+        console.log(volume2);
+        /*
+            Omdat we controleren of er 3 parameters meegegeven worden en dit niet het geval is
+            wordt er een foutboodschap teruggegeven
+        */
+
+        //  Functie aanroepen met teveel parameters
+        var volume3 = getVolume(10, 20, 3, 40, 100); // Error - onjuist aantal parameters
+        console.log(volume3);
+        /*
+            Omdat we controleren of er 3 parameters meegegeven worden en dit niet het geval is
+            wordt er een foutboodschap teruggegeven
+        */
+    </script>
+</body>
+</html>

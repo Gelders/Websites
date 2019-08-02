@@ -1,0 +1,139 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+
+    <style>
+        html{
+            box-sizing: border-box;
+        }
+
+        *,
+        *:before,
+        *:after
+        {
+            box-sizing: inherit;
+        }
+
+        .history{
+            color: darkgray;
+            height: 25px;
+        }
+
+        .display {
+            font-size: 50px;
+            font-weight: bold; 
+            text-align: right;
+            width: 100%; 
+            border-bottom: 1px solid darkgray;
+            height: 60px;
+        }
+
+        .container{
+            clear:both;
+        }
+
+        #calculator{
+            width: 202px; 
+            margin: auto; 
+            background-color: lightgrey; 
+            border: 1px solid darkgray;
+        }
+
+        .toRight{
+            float:right;
+        }
+
+        button {
+            width: 50px;
+            height: 50px;
+            margin: 0;
+        }
+
+        .button-3
+        {
+            width: 150px;
+        }
+
+        .button-4
+        {
+            width: 200px;
+        }
+    </style>
+</head>
+<body>
+    <section id="calculator">
+        <div class="container history">
+            <div id="history" class="toRight"></div>
+        </div>
+        <div id="uitkomst" class="container display"></div>
+        <div id="buttons">
+            <div class="container">
+                <button onclick="zeven()">7</button><button onclick="acht()">8</button><button onclick="negen()">9</button><button onclick="delen()">/</button>
+            </div>
+            <div class="container">
+                <button onclick="vier()">4</button><button onclick="vijf()">5</button><button onclick="zes()">6</button><button onclick="maal()">*</button>
+            </div>
+            <div class="container">
+                <button onclick="een()">1</button><button onclick="twee()">2</button><button onclick="drie()">3</button><button onclick="min()">-</button>
+            </div>
+            <div class="container">
+                <button onclick="nul()" class="button-3">0</button><button onclick="plus()">+</button>
+            </div>
+            <div class="container">
+                <button onclick="isGelijkAan()" class="button-4">=</button>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        function een() {
+            document.getElementById('history').innerHTML += '1';
+        }
+        function twee() {
+            document.getElementById('history').innerHTML += '2';
+        }
+        function drie() {
+            document.getElementById('history').innerHTML += '3';
+        }
+        function vier() {
+            document.getElementById('history').innerHTML += '4';
+        }
+        function vijf() {
+            document.getElementById('history').innerHTML += '5';
+        }
+        function zes() {
+            document.getElementById('history').innerHTML += '6';
+        }
+        function zeven() {
+            document.getElementById('history').innerHTML += '7';
+        }
+        function acht() {
+            document.getElementById('history').innerHTML += '8';
+        }
+        function negen() {
+            document.getElementById('history').innerHTML += '9';
+        }
+        function nul() {
+            document.getElementById('history').innerHTML += '0';
+        }
+
+        function plus() {
+            document.getElementById('history').innerHTML += '+';
+        }
+        function maal() {
+            document.getElementById('history').innerHTML += '*';
+        }
+        function min() {
+            document.getElementById('history').innerHTML += '-';
+        }
+        function delen() {
+            document.getElementById('history').innerHTML += '/';
+        }
+        function isGelijkAan() {
+            document.getElementById('uitkomst').innerHTML = eval(document.getElementById('history').innerHTML);
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,68 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <div id="divResult"></div>
+
+    <script>
+        // leeg object
+        var leegObject = {};
+        var anderLeegObject = new Object();
+        // Een object persoon
+        var persoon = {
+            voornaam: 'Jeffry',
+            achternaam: 'Steegmans',
+            Woonplaats: 'Elen'
+        }
+        // Schrijf eigenschap van een object naar het scherm
+        document.getElementById('divResult').innerHTML = 'Voornaam: ' + persoon.voornaam;
+
+
+        //  Functie voor het teruggeven van de prijs
+        var getBookPrice = function(isbn){
+            return "€25";
+        }
+        //  Complex object
+        var boek = {
+            titel: 'JavaScript',                // String waarden
+            isbn: '123456',
+            druk: 1,                            // numerieke waarden
+            jaar: 2014,
+            auteur: {                           // objectwaarde
+                voornaam: 'Peter',
+                achternaam: 'Kassenaar',
+                naam: function () {
+                    return this.voornaam + ' ' + this.achternaam;
+                }
+            },
+            prijs: getBookPrice(this.isbn),     // waarde uit functie resultaat
+            toString: function () {             // inline functie als resultaat
+                return this.titel + ' (' + this.auteur.naam() + ')';
+            }
+        };
+        //  Volledig object afdrukken
+        console.log(boek);
+        //  Enkel 1 propertie afdrukken (2 haakjes omdat dit een functie is)
+        console.log(boek.toString());
+
+        //  Classe aanmaken
+        function Boek(titel, auteur) {
+            this.titel = titel;
+            this.auteur = auteur;
+        }
+        //  Instantie aanmaken
+        var javascriptBoek = new Boek('Javascript', 'Peter Kassenaar');
+        var jQueryBoek = new Boek('jQuery', 'Peter Kassenaar');
+        //  Object uitlezen
+        console.log(boek['titel']);     // arraynotatie
+        console.log(boek.titel);        // puntnotatie
+        
+        //  Properties bijmaken
+        boek.hardCover = true;          // on-the-fly properties bijmaken
+        console.log(boek.hardCover);
+    </script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+
+    <script>
+        var zegHallo = (function () {
+            return {
+                groet: function (name) {
+                    console.log('Hello ' + name);
+                }
+            };
+        })(); // <-- IIFE
+
+        zegHallo.groet('Jeffry');
+        zegHallo.groet('Peter');
+
+        /*
+            - Er wordt een variabele 'zegHallo' gemaakt. Deze krijgt een zelfuitvoerende functie als waarde
+            - De functie retourneert een object
+            - Binnen het returnobject is een andere functie aanwezig. Deze heeft de naam 'groet()'
+            - Als parameter krijgt de functie een naam mee. De waarde wordt eenvoudig naar de console geschreven
+            - Na afloop van de functie wordt deze aangeroepen met 'zegHallo.groet()'. 
+              De eerste keer met de naam 'Jeffry', de tweede keer met de naam 'Peter'.
+            - In de console is nu te zien dat de variabele 'zegHallo' als globaal object aanwezig is. 
+              Het is een object, waarvan de eigenschap 'groet()' als functie bereikbaar is
+            - De functie 'groet()' is NIET op de global scope geplaatst. Dat is te controleren door in de console 
+              de waarde van 'groet()' op te vragen; deze geeft 'not defined'. Dit betekent dusdat de functie niet 
+              per ongeluk door andere code overschreven kan worden. Ze is alleen bekend binnen de context van 'zegHallo'.
+        */
+    </script>
+</body>
+</html>

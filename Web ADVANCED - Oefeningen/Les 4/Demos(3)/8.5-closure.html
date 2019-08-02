@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+
+    <script>
+        // GEEN closure
+        function geenClosure() {
+            // variable datum wordt niet opgeslagen
+            // tussen twee aanroepen naar de functie
+            var datum = new Date();
+            return datum.getMilliseconds();
+        }
+        for (var i = 0; i < 15; i++) {
+            console.log("Geen closure - (milliseconden): " + geenClosure());
+        }
+
+        // WEL closure
+        function welClosure() {
+            var datum = new Date();
+
+            return function () {
+                return datum.getMilliseconds();
+            }
+        }
+        var closureResultaat = welClosure();
+        for (var i = 0; i < 15; i++) {
+            console.log("Wel closure - (milliseconden): " + closureResultaat());
+        }
+    </script>
+</body>
+</html>

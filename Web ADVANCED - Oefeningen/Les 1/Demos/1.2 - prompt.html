@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+
+    <div id="divResult"></div>
+
+    <script>
+        //  Twee variabelen
+        var code = prompt('Vul uw promotiecode in', 'uw code');
+        var tekst = 'De code die u invoerde was: ' + code;
+        //  Resultaat in de pagina plaatsen
+        document.getElementById('divResult').innerHTML = tekst;
+
+        /*
+         * - Bij het openen van de pagina is nog niets te zien. Dat komt doordat de div een lege div is.
+         * - Met de functie prompt() wordt een 'code' gevraagd. De door de bezoeker ingevulde waarde wordt toegekend aan een variabele
+         *   die we de naam code geven. Een variabele wordt gemaakt met het JavaScript-keyword var.
+         * - We maken een tweede variabele met de naam tekst. 
+         *   Hieraan wordt een standaardberichttekst toegekend en we voegen er ook de ingevulde code aan toe
+         * - Daarna selecteren we een element op de pagina. Dit doen we met het statement document.getElementById('divResult').
+         *   Dat betekent: selecteer op de pagina het element met de id 'divResult'. Dit is de lege div die we in HTML hebben gedefinieerd.
+         * - Van deze div passen we de eigenschap innerHTML aan door de waarde van de variabele tekst er aan toe te kennen.
+         *   Oftewel: de door ons samengestelde tekst wordt in de pagina geplaatst.
+         */
+    </script>
+</body>
+</html>

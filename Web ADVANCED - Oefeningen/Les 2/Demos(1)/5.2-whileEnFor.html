@@ -1,0 +1,48 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <ul id="resultWhile"></ul>
+    <ul id="resultFor"></ul>
+
+    <script>
+        var teller = 1,
+            getal = 10;
+
+        while (teller <= 10) {
+            document.getElementById('resultWhile').innerHTML +=
+                '<li>' + teller + ' maal ' + getal + ' = ' + (teller * getal) + '</li>';
+            teller++; // Teller met 1 ophogen -> anders oneindige lus!
+        }
+
+        /*
+            - Er worden eerst twee variabelen geïnitialiseerd die in de lus worden gebruikt: teller & getal.
+              De teller wordt geïnitialiseerd op 1 (beginwaarde), getal is het getal waarvan de tafel op het scherm moet worden getoond
+            - Dan volgt het begin van de lus. De voorwaarde die we aangeven is dat de lus doorlopen moet worden zolang teller kleiner of gelijk is aan 10.
+            - De waarden van teller en getal worden in een zin op het scherm gezet;
+              de waarde van teller * getal wordt berekend
+            - In de regel daarna wordt teller één opgehoogd
+            - Na de eerste doorgang bekijkt JavaScript de waarde van teller. 
+              Deze is nu 2. Dit is kleiner dan 10, dus de lus wordt nogmaals doorlopen.
+            - Dit gaat zo door tot de tiende keer. Dan heeft teller de waarde 11 gekregen en voldoet de lus niet meer aan de voorwaarde (teller <= 10).
+              De lus wordt dus beëindigd. JavaScript gaat verder met de eerstvolgende regel code na de sluitaccolade
+         */
+
+        for (var i = 1; i <= 10; i++) {
+            document.getElementById('resultFor').innerHTML +=
+                '<li>' + i + ' maal ' + getal + ' = ' + (i * getal) + '</li>';
+        }
+
+        /*
+            - Eerst wordt de for lus samengesteld:
+                - index: var i = 1
+                - voorwaarde: i <= 10
+                - indexbewerking: i++
+            - De i initialiseren we binnen de definitie. De lus wordt uitgevoerd zolang i kleiner of gelijk is aan 10
+            - Na elke doorgang wordt i één opgehoogd. Na de tiende doorgang heeft i de waarde 11 en wordt de lus afgebroken
+    </script>
+</body>
+</html>
