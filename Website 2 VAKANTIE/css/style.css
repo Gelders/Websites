@@ -1,0 +1,184 @@
+body{
+    font:15px/1.5 Arial, Helvetica, sans-serif;
+    padding: 0;
+    margin: 0;
+    background-color: #f4f4f4;
+}
+
+/*Global*/
+.container{
+    width: 80%;
+    margin: auto;
+    overflow:hidden;
+
+}
+
+ul{
+    padding: 0;
+    margin: 0;
+
+}
+
+.current{
+    color: orange;
+}
+
+.dark{
+    padding: 15px;
+    background-color: #35424a;
+    color: #ffffff;
+    margin: 10px 0 10px 0
+}
+
+.Article_Footer{
+    background-color: #35424a;
+    color: #ffffff;
+    padding: 15px;
+    margin-top: 10px 0 10px 0;
+    float: left;
+}
+
+.FloatLeft{
+    float: left;
+    padding: 10px;
+    overflow: auto;
+}
+
+.FloatRight{
+    float: right;
+    overflow: auto;
+}
+.highlight{
+    color:#e8491d;
+    font-weight:bold;
+}
+/*Header*/
+header{
+    background-color: #35424a;
+    color: #ffffff;
+    padding-top: 30px;
+    min-height: 70px;
+    border-bottom: #e8491d 3px solid;
+}
+
+header a{
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 16px;
+}
+
+header li{
+    display: inline;
+    padding: 0 20px 0 20px;
+}
+
+header #banner{
+    float:left;
+}
+
+header #banner h1{
+    margin:0;
+}
+
+header nav{
+    float:right;
+    margin-top:10px;
+}
+
+header .current a{
+    color:#e8491d;
+    font-weight:bold;
+}
+
+header a:hover{
+    color: #cccccc;
+    font-weight: bold;
+}
+
+.bottem{
+    border-bottom: #e8491d 3px solid;
+}
+/*Showcase*/
+#showcase{
+    min-height: 400px;
+    background: url(/img/Showcase.jpg) no-repeat 0 -400px;
+    text-align: center;
+    color: #ffffff;
+}
+
+#showcase h1{
+    margin-top: 100px;
+    font-size: 55px;
+    margin-bottom: 10px;
+}
+
+#showcase p{
+    font-size: 20px;
+}
+
+/*ExtraBox*/
+#ExtraBox{
+    padding: 15px;
+    color:#ffff;
+    background-color: #35424a;
+}
+
+/*Footer*/
+footer{
+    padding:20px;
+    margin-top: 20px;
+    color:#ffffff;
+    background-color: #e8491d;
+    text-align: center;
+}
+
+/*Media Queries*/
+@media(max-width:768px){
+    header #branding,
+    header nav,
+    header nav li,
+    #newsletter h1,
+    #newsletter form,
+    #boxes .box,
+    article#main-col,
+    article#main-col footer,
+    aside#sidebar{
+        float: none;
+        text-align: center;
+        width: 100%;
+    }
+
+    header{
+        padding-bottom: 20px;
+    }
+
+    #showcase h1{
+        margin-top: 40px;
+    }
+
+    #newsletter button, .quote button{
+        display:block;
+        width: 100%;
+    }
+
+    #newsletter form input[type="email"], .quote input, .quote textarea{
+        width: 100%;
+        margin-bottom: 5px;
+    }
+
+    .boven{
+        visibility: hidden;
+    }
+}
+
+@media(min-width:1921px){
+    #showcase{
+        margin: 0 20px 0 20px;
+        min-height: 400px;
+        background:url(/img/Showcase_BiggerScreen.jpg) no-repeat 0 -400px;
+        text-align:center;
+        color:#ffff;
+    }
+    
+}
