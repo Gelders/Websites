@@ -1,0 +1,113 @@
+<!DOCTYPE <!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width">
+        <meta name="keyword" content="Web design, Peter , html, css, fun, affordable web Page">
+        <meta name="author" content="Peter Gelders">
+        <title>Peter Web Design | Services</title>
+        <link rel="stylesheet" type="text/css" media="screen" href="/css/style.css" />
+
+        <script LANGUAGE="JavaScript" type="text/javascript">
+        function display() {
+            DispWin = window.open('','NewWin', 'toolbar=no,status=no,width=300,height=200')
+            message = "<ul><li><b>Naam: </b>" + document.form1.name.value;
+            message += "<li><b>Email adres: </b>" + document.form1.email.value;
+            message += "<li><b>Bericht: </b>" + document.form1.Text.value + "</ul>";
+            DispWin.document.write(message);
+        }
+        </script>
+
+    </head>
+    <body>
+        <header>
+            <div class="container">
+                <div id="branding">
+                    <h1><span class="highlight">Peter</span> Web Design</h1>
+                </div>   
+                <nav>
+                    <ul>
+                        <li><a href="/index.html">Home</a></li>
+                        <li><a href="/Articles.html">Articles</a></li>
+                        <li><a href="/About.html">About</a></li>
+                        <li class="current"><a href="/Services.html">Services</a></li>
+                    </ul>
+                </nav> 
+            </div>
+
+        </header>
+
+        <section id="newsletter">
+            <div class="container">
+                <h1>Services</h1>
+                <form method="POST">
+                    <input type="email" placeholder="Enter Email...">
+                    <button type="submit" class="button1">Abonneer</button>
+                </form>
+            </div>
+        </section>
+
+        <section id="main">
+            <div class="container">
+                <article id="main-col">
+                    <h1 class="pagie-title">About me</h1>
+                    <ul id="services">
+                        <li>
+                            <h3>Website Design</h3>
+                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Itaque, esse. Similique voluptates quia modi incidunt nobis est, explicabo libero cumque animi et quod rem quae dolor provident autem nihil necessitatibus?</p>
+                            <p>Prijs: &euro;1.000 - &euro;3.000</p>
+                        </li>
+                        <li>
+                            <h3>Website Onderhoud</h3>
+                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Itaque, esse. Similique voluptates quia modi incidunt nobis est, explicabo libero cumque animi et quod rem quae dolor provident autem nihil necessitatibus?</p>
+                            <p>Prijs: &euro;150 per maand</p>
+                        </li>
+                        <li>
+                            <h3>Website Hosten</h3>
+                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Itaque, esse. Similique voluptates quia modi incidunt nobis est, explicabo libero cumque animi et quod rem quae dolor provident autem nihil necessitatibus?</p>
+                            <p>Prijs: &euro;25 per maaand</p>
+                        </li>
+                    </ul>
+                </article>
+
+                <aside id="sidebar">
+                    <div class="dark">
+                        <h3>Ontvang een offerte</h3>
+                        <form name="form1" method="POST" class="quote">
+                            <div>
+                                <label for="name">
+                                    Naam
+                                    <p>
+                                        <input type="text" name="name" id="name" placeholder="Naam">
+                                    </p>
+                                </label>
+                            </div>
+                            <div>
+                                <label for="email">
+                                    Email
+                                    <p>
+                                        <input type="email" name="email" id="email" placeholder="Email adres">
+                                    </p>
+                                </label>
+                            </div>
+                            <div>
+                                <label for="Text">
+                                    Bericht
+                                    <p>
+                                        <textarea id="Text" name="Text" placeholder="Bericht..."></textarea>
+                                    </p>
+                                </label>
+                            </div>
+                            <button class="button1" value="Display" onclick="display();">Versturen</button>
+                        </form>
+                    </div>
+                </aside>
+            </div>
+        </section>
+
+        <footer>
+            <p>Peter Gelders Web Design, Copyright &copy; 2018</p>
+        </footer>
+    </body>
+</html>

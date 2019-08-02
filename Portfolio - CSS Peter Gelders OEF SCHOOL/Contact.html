@@ -1,0 +1,131 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Contact - Portfolio van John Doe</title>
+    <meta charset="utf-8" />
+    <meta name="description" content="De portfolio website van Anonymous" />
+    <meta name="keywords" content="Portfolio, Curriculum Vitae, Anonymous, Blog" />
+    <meta name="author" content="Anonymous" />
+
+    <link rel="icon" href="favicon.ico" />
+
+    <link href="css/hoofdstuk3.css" rel="stylesheet" />
+    <link href="css/hoofdstuk4.css" rel="stylesheet" />
+    <link href="css/PeterGelders_CSS.css" rel="stylesheet" />
+</head>
+<body id="Top">
+
+    <aside>
+        <a href="img/Anonymous_Groot.jpg">
+            <img src="img/Anonymous.jpg" alt="Anonymous" />
+        </a>
+        <span id="UserName">John Doe</span>
+
+        <nav>
+            <ul>
+                <li>
+                    <a href="Index.html">Home</a>
+                </li>
+                <li>
+                    <a href="Cv.html">Curriculum vitae</a>
+                </li>
+                <li>
+                    <a href="Blog.html">Blog</a>
+                </li>
+                <li>
+                    <a href="Contact.html">Contact</a>
+                </li>
+            </ul>
+        </nav>
+    </aside>
+
+    <header>
+        <a href="Index.html">John Doe</a>
+        <ul>
+            <li>
+                <audio controls preload="metadata">
+                    <source src="audio/Meat Loaf - Bat Out of Hell.mp3" type="audio/mp3" />
+                </audio>
+            </li>
+            <li>
+                <a href="#">
+                    Print
+                </a>
+            </li>
+        </ul>
+    </header>
+
+    <main>
+        <form method="get" action="Contact.html">
+            <p>
+                <label for="Naam">
+                    Naam :
+                    <input type="text" id="Naam" name="Naam"
+                           autofocus required placeholder="Voornaam Achternaam"
+                           minlength="5" />
+                </label>
+            </p>
+            <p>
+                <label for="Land">
+                    Land :
+                    <select id="Land" name="Land">
+                        <optgroup label="BeNeLux">
+                            <option value="Be">Belgi&euml;</option>
+                            <option value="Nl">Nederland</option>
+                            <option value="Lux">Luxemburg</option>
+                        </optgroup>
+                        <optgroup label="Rest van Europa">
+                            <option value="Du">Duitsland</option>
+                            <option value="Fr">Frankrijk</option>
+                            <option value="En">Engeland</option>
+                        </optgroup>
+                    </select>
+                </label>
+            </p>
+            <p>
+                <label for="Email">
+                    Email :
+                    <input type="email" id="Email" name="Email"
+                           required placeholder="john.doe@domain.com" />
+                </label>
+            </p>
+            <p>
+                <label>
+                    Geslacht :
+                    <label  for="GeslachtMan">
+                        <span class="span">
+                        <input type="radio" value="Man"
+                               id="GeslachtMan" name="Geslacht" />
+                        Man
+                    </label>
+                    <label for="GeslachtVrouw">
+                        <span class="span">
+                        <input type="radio" value="Vrouw"
+                               id="GeslachtVrouw" name="Geslacht" />
+                        Vrouw
+                    </label>
+                </label>
+            </p>
+            <p>
+                <label for="Nieuwsbrief">
+                    Nieuwsbrief :
+                    <input type="checkbox" name="Nieuwsbrief" id="Nieuwsbrief" />
+                </label>
+            </p>
+            <p>
+                <textarea id="Opmerking" name="Opmerking"
+                          cols="25" rows="10"></textarea>
+            </p>
+            <p>
+                <input type="submit" value="Verzend" />
+            </p>
+        </form>
+    </main>
+
+    <footer>
+        <div>
+            <h4>&copy; 2018 John Doe</h4>
+        </div>
+    </footer>
+</body>
+</html>

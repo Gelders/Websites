@@ -1,0 +1,111 @@
+﻿/* 2 */
+table
+{
+    border-collapse:collapse;
+}
+
+/* 3 */
+table,
+th,
+td
+{
+    border: 1px solid black;
+}
+
+/* 4 */
+table > caption > h2
+{
+    font-size: 2rem;
+    text-align: left;
+}
+
+/* 5 */
+#Personalia > table th
+{
+    text-align: right;
+}
+
+/* 6 */
+#Talenkennis > table  tr:nth-child(2n)
+{
+    background-color: lightgrey;
+}
+
+/* 7 */
+a
+{
+    color: #5bc0de;
+    text-decoration: none;
+}
+
+/* 8 */
+a:hover
+{
+    text-decoration: underline;
+}
+
+/* 9 */
+.blog > li
+{
+    display: inline-block;
+}
+
+    .blog > li > article
+    {
+        width: 250px;
+        border: 1px solid black;
+    }
+
+        .blog > li > article > h1 > a
+        {
+            font-size: 1.1rem;
+            color:black;
+            text-transform: uppercase;
+        }
+
+        .blog > li > article > h1 > a:hover
+        {
+            text-decoration: none;
+        }
+
+        .blog > li > article > figure
+        {
+            text-align: center;
+        }
+
+            .blog > li > article > figure > figcaption
+            {
+                font-style:italic;
+                font-size: 0.7rem;
+            }
+
+        .blog > li > article > p
+        {
+            text-align: justify;
+        }
+
+        /* 10 */
+        .blog > li > article > p::first-letter
+        {
+            font-weight: 700;
+            font-size: 1.5rem;
+        }
+
+/* 11 */
+input[type=text]
+{
+    font-weight: 700;
+}
+
+/* uitbreiding */
+.BlogPosts > ul,
+.BlogPosts > section
+{
+    display:none;
+}
+
+.BlogPosts > #blogNavigatie:target,
+.BlogPosts > section:target
+{
+    display:inline-block;
+}

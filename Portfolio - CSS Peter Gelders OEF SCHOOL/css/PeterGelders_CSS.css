@@ -1,0 +1,179 @@
+/* Margin en padding van de body verwijderen  */
+body{
+    margin: 0;
+    padding: 0;
+}
+/* Aside element links vastzetten met de volgende eigenschappen */
+aside{
+    position: fixed;
+    left: 0;
+    top: 0;
+    background-color: #2a2c36;
+    color: #eee;
+    height: 100%;
+    width: 250px;
+}
+
+    /* Foto (img) Maximum breedte/Rand */
+    aside img{
+        max-width: 50px;
+        border: 1px solid #222;
+    }
+
+/* Navigatie menu  */
+aside nav ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+    /* Link  */
+    aside nav ul li a{
+        width: 100%;
+        padding: 10px 15px;
+        color: #008cba;
+        /* maakt met border-box mogelijk om de hover mooi hetzelfde te houden als de width
+        van de aside background-color. Width & Height hebben de min/max eigenschappen, content, padding en border er ook nu inbegrepen. 
+        Dus 250px width + 10 15 10 15 padding wordt samengevoegd maar door de box-sizing te verandere verander zo zodat die allemaal in de 250px width zitten */
+        box-sizing: border-box;
+    }
+        /* Link hover*/
+        aside nav ul li a:hover
+        {
+            background-color:#eee;
+            text-decoration: none;
+        }
+
+/* Alle andere elementen bundelen en 250 pixels naar rechts verplaatsen  */
+    /* DEZE BIJDEN WERKEN NIET / GEWOON AAN HET UITPORBEREN VERWIJDER DID ALS JE HET DOCUMENT DOORSTUURT */
+        /* Selecteer elke element behalve de "aside" element en in "aside" element selecteer je *alles */
+            /* :not(*aside){
+                margin-left: 250px;
+            } */
+
+        /* Selecteer elke body element waar geen aside in zit.... */
+            /* body:not(*aside){
+                margin-left: 250px;
+            } */
+
+    /* Werkt wel, selecteer alle header,main,footer elementen in de Body */
+        body header,
+        main{
+            margin-left: 250px;
+        }
+
+/* Hoofding sectie van de pagina aanpassen met volgende eigenschappen  */
+header{
+    font-size: 0.75rem;
+    font-weight: 300;
+    min-height: 5rem;
+    margin-bottom: 1.5rem;
+    background-color: #008cba;
+    overflow: auto;
+}
+
+    /* Link (naam) in de hoofding  */
+        header >a{
+            float: left;
+            padding: 12px 15px;
+            font-size: 1.35rem;
+            line-height: 1.5rem;
+            color: #eee;
+            text-decoration: none;
+        }
+
+    /* Rechter menu in de hoofding   */
+    header ul{
+        float: right;
+        display: inline-flex;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    header ul li{
+        margin: 0px 5px;
+        padding: 0;
+    }
+
+    header ul li audio{
+        padding-top: 0.5rem;
+    }
+
+    header ul li a{
+        text-decoration: none;
+        color: #eee;
+        display: inline-block;
+        padding: 10px 15px;
+        vertical-align: top;
+        background-color: #5bc0de;
+        border: solid 1px #46b8da;
+    }
+    
+/* Main sectie  */
+main{
+    padding-left: 1.5rem;
+    /* Compensatie voor de footer die fixed is anders zag je bij de verschillende posts de onderkant niet meer  */
+    margin-bottom: 50px;
+}
+
+/* Footer sectie vast zetten aan de onderkant en de linkerkant van het scherm met de volgende eigenschappen  */
+footer{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    min-height: 3rem;
+    color: #5bc0de;
+    background-color: #008cba;
+    text-align: center;
+}
+
+    /* Hoofding 4 binnen footer  */
+    footer h4{
+        margin: 0;
+        line-height: 3rem;
+    }
+
+/* Contact.html */
+/* Alle form elementen de volgende eigenschappen geven  */
+form input,select,textarea{
+    width: 250px;
+}
+    /* Deze terug zetten naar automatische waarde anders zien ze er zeer erg uit. */
+    input[type=checkbox]{
+        width: auto;
+    }
+
+    input[type=radio]{
+        width: auto;
+    }
+
+    /* Labels boven form elementen weergeven ipv ervoor  */
+    /* Dit gaat ook makkelijk als je de label gewoon op 1 lijn zet in de html document
+    en dan label{display:block} in css. Weet niet als dat mag in dit opdracht. Daarom doe ik dit */
+    form p label:first-child{
+        display: grid;
+        font-weight: bold;
+    }
+
+    /* De 2 labels in een label (radio buttons)
+        <label>
+            <label></label>
+            <label></label>
+        </label>
+    Terug zetten zodat ze op 1 lijn komen terug. Inline. Maar lukt niet.*/
+    form p label label:first-child{
+        font-weight: 100; 
+    }
+
+    form p label label:last-child {
+        font-weight: 100; 
+    }
+
+/* Link "Verzenden" op index pagina opmaak */
+.link{
+    color: #008cba;
+    text-decoration: none;
+}
